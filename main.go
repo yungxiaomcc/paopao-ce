@@ -36,9 +36,11 @@ func (s *suites) Set(value string) error {
 }
 
 func init() {
+	// 解析外部参数
 	flagParse()
-
+	// 初始化配置
 	conf.Initialize(features, noDefaultFeatures)
+	// 初始化服务
 	internal.Initialize()
 }
 

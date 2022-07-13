@@ -26,6 +26,7 @@ func NewRouter() *gin.Engine {
 
 	// 按需注册 docs、静态资源、LocalOSS 路由
 	{
+		// 注册文档前端页面
 		registerDocs(e)
 		registerStatick(e)
 		routeLocalOSS(e)

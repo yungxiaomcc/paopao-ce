@@ -12,7 +12,8 @@ ARG API_HOST
 ARG USE_DIST=no
 USER root
 
-# copy static files
+# copy static files 
+# 首先再node：18中进行前端build，然后将文件复制到nginx docker
 COPY --from=frontend /web/dist/ /usr/share/nginx/html/
 
 # HEALTHCHECK

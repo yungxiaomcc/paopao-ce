@@ -27,7 +27,7 @@ build:
 
 run:
 	@go run -trimpath -gcflags "all=-N -l" -tags '$(TAGS)' -ldflags '$(LDFLAGS)' .
-
+# 伪目标，并不是为了生成文件
 .PHONY: release
 release: linux-amd64 darwin-amd64 darwin-arm64 windows-x64
 	@echo Package paopao-ce
